@@ -24,10 +24,23 @@ $ pnpm exec nx graph
 And here how the dependency is available at runtime.
 
 ```
-$ pnpm exec nx run my-app:start
+$ pnpm list -r
+
+Legend: production dependency, optional only, dev only
+
+/nx-and-pnpm-alias-issue
+
+devDependencies:
+nx 19.5.3
+
+my-app /nx-and-pnpm-alias-issue/apps/my-app
+
+dependencies:
+another-shared-lib-alias link:../../libs/another-shared-lib
+shared-lib link:../../libs/shared-lib
 ```
 
-![image](https://github.com/user-attachments/assets/72b6d7ce-da9c-422a-ba94-4f06c3704be8)
+
 
 
 ## Workaround
