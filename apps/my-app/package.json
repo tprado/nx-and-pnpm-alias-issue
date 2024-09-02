@@ -1,0 +1,10 @@
+{
+  "name": "my-app",
+  "dependencies": {
+    "shared-lib": "workspace:*",
+    "another-shared-lib-alias": "workspace:another-shared-lib@*"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
